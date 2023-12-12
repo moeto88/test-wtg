@@ -15,7 +15,8 @@ const {Server} = require("socket.io")
 const io = new Server(expServer, {
     cors: {
         origin: "https://test-kw53.onrender.com",
-        methods: ["GET", "POST"]
+        methods: ["GET", "POST"],
+        credentials: true
     }
 })
 
