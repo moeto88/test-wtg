@@ -15,6 +15,7 @@ const {Server} = require("socket.io")
 const io = new Server(expServer, {
     cors: {
         origin: "https://test-kw53.onrender.com",
+        //origin: "http://localhost:8080/",
         methods: ["GET", "POST"],
         credentials: true
     }
@@ -273,8 +274,7 @@ app.get('/', function (req,res) {
 });
 
 const PORT = process.env.PORT || 8080
-expServer.listen(PORT, () => {
-    console.log("Listening at :${PORT}...")
+    expServer.listen(PORT, () => {
 })
 
 
